@@ -12,6 +12,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
+import Splash from "./splash";
 import { Button } from "./ui/button";
 
 export default function Menu() {
@@ -20,11 +21,12 @@ export default function Menu() {
       {burgers.map(({ name, description, image }, i) => (
         <Card className="mt-[50%]" key={i}>
           <CardHeader className="relative mt-12">
+            <Splash className="absolute left-1/2 top-36 -z-10 w-full -translate-x-1/2 -translate-y-full fill-primary" />
             <Image
               src={image}
               alt=""
               sizes="auto"
-              className="absolute left-1/2 top-2 aspect-video w-[85%] -translate-x-1/2 -translate-y-full object-contain object-bottom"
+              className="absolute left-1/2 top-2 aspect-video w-[85%] -translate-x-1/2 -translate-y-full object-contain object-bottom drop-shadow-[0px_0px_10px_rgba(0,0,0,0.5)]"
             />
             <CardTitle>{name}</CardTitle>
             <CardDescription className="text-balance">
