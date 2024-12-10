@@ -14,6 +14,23 @@ import {
 
 import Splash from "./splash";
 import { Button } from "./ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "./ui/dialog";
+import { Label } from "./ui/label";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "./ui/select";
 
 export default function Menu() {
   return (
@@ -35,10 +52,57 @@ export default function Menu() {
           </CardHeader>
           <div>
             <CardFooter>
-              <Button size="lg" className="w-full">
-                <FontAwesomeIcon icon={faBasketShopping} />
-                <span>Agregar al carrito</span>
-              </Button>
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button size="lg" className="w-full">
+                    <FontAwesomeIcon icon={faBasketShopping} />
+                    <span>Agregar al carrito</span>
+                  </Button>
+                </DialogTrigger>
+                <DialogContent>
+                  <DialogHeader>
+                    <DialogTitle>{name}</DialogTitle>
+                    <DialogDescription>{description}</DialogDescription>
+                  </DialogHeader>
+
+                  <div className="space-y-2">
+                    <div className="space-y-1">
+                      <Label>Medallones de carne</Label>
+                      <Select defaultValue="simple">
+                        <SelectTrigger>
+                          <SelectValue />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="simple">Simple</SelectItem>
+                          <SelectItem value="doble">Doble</SelectItem>
+                          <SelectItem value="triple">Triple</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </div>
+
+                    <div className="space-y-1">
+                      <Label>Tipo de pan</Label>
+                      <Select defaultValue="brioche">
+                        <SelectTrigger>
+                          <SelectValue />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="brioche">Pan brioche</SelectItem>
+                          <SelectItem value="queso">Pan de queso</SelectItem>
+                          <SelectItem value="papa">Pan de papa</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </div>
+                  </div>
+
+                  <DialogFooter>
+                    <Button size="lg" className="w-full">
+                      <FontAwesomeIcon icon={faBasketShopping} />
+                      <span>Agregar al carrito</span>
+                    </Button>
+                  </DialogFooter>
+                </DialogContent>
+              </Dialog>
             </CardFooter>
           </div>
         </Card>
