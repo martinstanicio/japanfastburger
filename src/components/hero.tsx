@@ -4,7 +4,7 @@ export default function Hero() {
       <h1 className="text-balance text-center text-4xl font-bold sm:text-5xl md:text-6xl lg:text-7xl">
         Japan Fast Burger
       </h1>
-      <div className="mx-auto aspect-square w-72 max-w-full rounded bg-red-500"></div>
+      <div className="mx-auto aspect-square w-72 max-w-full rounded-full bg-red-500"></div>
     </section>
   );
 }
