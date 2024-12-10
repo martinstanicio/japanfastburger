@@ -7,7 +7,7 @@ import { Button } from "./ui/button";
 
 export default function Navbar() {
   return (
-    <nav className="flex items-center justify-between p-8">
+    <nav className="flex items-center justify-between p-4 sm:p-8">
       <span className="font-bold">Japan Fast Burger</span>
 
       <Button size="icon" asChild className="sm:hidden">
