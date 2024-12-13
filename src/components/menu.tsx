@@ -6,6 +6,7 @@ import Image from "next/image";
 
 import {
   Card,
+  CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
@@ -35,7 +36,7 @@ import {
 export default function Menu() {
   return (
     <section className="mx-auto grid max-w-6xl gap-8 sm:grid-cols-2 lg:grid-cols-3">
-      {burgers.map(({ name, description, image }, i) => (
+      {burgers.map(({ name, description, image, burger }, i) => (
         <Card className="mt-[50%]" key={i}>
           <CardHeader className="relative mt-12">
             <Splash className="absolute left-1/2 top-36 -z-10 w-full -translate-x-1/2 -translate-y-full fill-primary" />
@@ -51,6 +52,9 @@ export default function Menu() {
             </CardDescription>
           </CardHeader>
           <div>
+            <CardContent>
+              <Image src={burger} alt="" />
+            </CardContent>
             <CardFooter>
               <Dialog>
                 <DialogTrigger asChild>
@@ -64,6 +68,12 @@ export default function Menu() {
                     <DialogTitle>{name}</DialogTitle>
                     <DialogDescription>{description}</DialogDescription>
                   </DialogHeader>
+
+                  <Image
+                    src={burger}
+                    alt=""
+                    className="mx-auto w-full max-w-72"
+                  />
 
                   <div className="space-y-2">
                     <div className="space-y-1">
