@@ -1,6 +1,10 @@
+"use client";
+
 import { faBasketShopping } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import burgers from "~/burgers";
+import burgers, { prices } from "~/burgers";
+
+import { useState } from "react";
 
 import Image from "next/image";
 
@@ -12,6 +16,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { ARS } from "@/lib/currency";
 
 import Splash from "./splash";
 import { Button } from "./ui/button";
@@ -34,6 +39,7 @@ import {
 } from "./ui/select";
 
 export default function BurgerMenu() {
+  const [size, setSize] = useState("simple");
   return (
     <section className="mx-auto grid max-w-6xl gap-8 sm:grid-cols-2 lg:grid-cols-3">
       {burgers.map(({ name, description, image, burger }, i) => (
@@ -78,14 +84,20 @@ export default function BurgerMenu() {
                   <div className="space-y-2">
                     <div className="space-y-1">
                       <Label>Medallones de carne</Label>
-                      <Select defaultValue="simple">
+                      <Select defaultValue="simple" onValueChange={setSize}>
                         <SelectTrigger>
                           <SelectValue />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="simple">Simple</SelectItem>
-                          <SelectItem value="doble">Doble</SelectItem>
-                          <SelectItem value="triple">Triple</SelectItem>
+                          <SelectItem value="simple">
+                            Simple - {ARS.format(prices.simple)}
+                          </SelectItem>
+                          <SelectItem value="double">
+                            Doble - {ARS.format(prices.double)}
+                          </SelectItem>
+                          <SelectItem value="triple">
+                            Triple - {ARS.format(prices.triple)}
+                          </SelectItem>
                         </SelectContent>
                       </Select>
                     </div>
@@ -105,7 +117,11 @@ export default function BurgerMenu() {
                     </div>
                   </div>
 
-                  <DialogFooter>
+                  <DialogFooter className="block sm:space-x-0">
+                    <p className="mb-6 mt-4 text-center text-2xl font-bold">
+                      {ARS.format(prices[size])}
+                    </p>
+
                     <Button size="lg" className="w-full">
                       <FontAwesomeIcon icon={faBasketShopping} />
                       <span>Agregar al carrito</span>

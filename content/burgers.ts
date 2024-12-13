@@ -50,4 +50,10 @@ const burgers = [
   },
 ];
 
+export const prices: Record<string, number> = {
+  simple: 10000,
+  double: 12000,
+  triple: 14000,
+};
+
 export default burgers;
