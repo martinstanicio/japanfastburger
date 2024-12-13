@@ -37,7 +37,7 @@ export default function BurgerMenu() {
   return (
     <section className="mx-auto grid max-w-6xl gap-8 sm:grid-cols-2 lg:grid-cols-3">
       {burgers.map(({ name, description, image, burger }, i) => (
-        <Card className="mt-[50%]" key={i}>
+        <Card className="mx-auto mt-[50%] max-w-96" key={i}>
           <CardHeader className="relative mt-12">
             <Splash className="absolute left-1/2 top-36 -z-10 w-full -translate-x-1/2 -translate-y-full fill-primary" />
             <Image
