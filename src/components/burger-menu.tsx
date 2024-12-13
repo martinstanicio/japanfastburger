@@ -33,7 +33,7 @@ import {
   SelectValue,
 } from "./ui/select";
 
-export default function Menu() {
+export default function BurgerMenu() {
   return (
     <section className="mx-auto grid max-w-6xl gap-8 sm:grid-cols-2 lg:grid-cols-3">
       {burgers.map(({ name, description, image, burger }, i) => (
