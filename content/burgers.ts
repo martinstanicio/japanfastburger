@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image";
+
 import burger from "@/assets/burger.png";
 import datsun240z from "@/assets/datsun-240z.png";
 import imprezawrxsti from "@/assets/impreza-wrx-sti.png";
@@ -6,7 +8,14 @@ import silvias15 from "@/assets/silvia-s15.png";
 import skylinegtr from "@/assets/skyline-gt-r.png";
 import supra2jzgte from "@/assets/supra-2jz-gte.png";
 
-const burgers = [
+export type Burger = {
+  name: string;
+  description: string;
+  image: StaticImageData;
+  burger: StaticImageData;
+};
+
+const burgers: Burger[] = [
   {
     name: "Skyline GT-R",
     description:
