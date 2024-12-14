@@ -1,6 +1,6 @@
-import { Burger } from "~/burgers";
-
 import Image from "next/image";
+
+import { Burger } from "~/burgers";
 
 import BurgerDialog from "./burger-dialog";
 import Splash from "./splash";

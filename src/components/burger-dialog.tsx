@@ -2,12 +2,13 @@
 
 import { faBasketShopping } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Burger, prices } from "~/burgers";
 
 import Image from "next/image";
 import { useState } from "react";
 
 import { ARS } from "@/lib/currency";
+
+import { Burger, prices } from "~/burgers";
 
 import { Button } from "./ui/button";
 import {
