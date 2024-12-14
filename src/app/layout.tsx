@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
+import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import { cn } from "@/lib/utils";
 
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className={cn("dark antialiased", bodyFont.className)}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
