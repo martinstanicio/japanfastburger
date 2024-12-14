@@ -5,17 +5,17 @@ import { Separator } from "@/components/ui/separator";
 
 export default function Home() {
   return (
-    <main className="space-y-8">
+    <main>
       <Hero />
       <Separator />
-      <section className="space-y-8 p-4 sm:p-8">
+      <section className="space-y-8 p-8 px-4 sm:space-y-16 sm:py-16">
         <h2 className="text-center text-3xl font-bold md:text-4xl">
           Hamburguesas
         </h2>
         <BurgerMenu />
       </section>
       <Separator />
-      <section className="space-y-8 p-4 sm:p-8">
+      <section className="space-y-8 p-8 px-4 sm:space-y-16 sm:py-16">
         <h2 className="text-center text-3xl font-bold md:text-4xl">
           Papas fritas
         </h2>
