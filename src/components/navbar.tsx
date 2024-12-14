@@ -2,12 +2,13 @@ import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 
+import Brand from "./brand";
 import { Button } from "./ui/button";
 
 export default function Navbar() {
   return (
     <nav className="flex items-center justify-between p-4 sm:p-8">
-      <span className="font-bold">Japan Fast Burger</span>
+      <Brand />
 
       <Button size="icon" asChild className="sm:hidden">
         <Link href="https://www.instagram.com/japanfastburger/">
