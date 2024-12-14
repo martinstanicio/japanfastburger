@@ -29,7 +29,11 @@ import {
   SelectValue,
 } from "./ui/select";
 
-export default function BurgerDialog({ name, description, burger }: Burger) {
+export default function BurgerDialog({
+  name,
+  description,
+  burgerImage,
+}: Burger) {
   const [size, setSize] = useState("simple");
 
   return (
@@ -46,7 +50,7 @@ export default function BurgerDialog({ name, description, burger }: Burger) {
           <DialogDescription>{description}</DialogDescription>
         </DialogHeader>
 
-        <Image src={burger} alt="" className="mx-auto w-full max-w-72" />
+        <Image src={burgerImage} alt="" className="mx-auto w-full max-w-72" />
 
         <div className="space-y-2">
           <div className="space-y-1">
