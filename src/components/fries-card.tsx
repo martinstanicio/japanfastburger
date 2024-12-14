@@ -1,8 +1,8 @@
 import Image from "next/image";
 
-import { ARS } from "@/lib/currency";
-
 import { Fries } from "~/fries";
+
+import { ARS } from "@/lib/currency";
 
 import FriesDialog from "./fries-dialog";
 import {

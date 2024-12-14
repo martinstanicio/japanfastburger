@@ -1,11 +1,10 @@
 import { faBasketShopping } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import Image from "next/image";
 
-import { ARS } from "@/lib/currency";
-
 import { Fries } from "~/fries";
+
+import { ARS } from "@/lib/currency";
 
 import { Button } from "./ui/button";
 import {
