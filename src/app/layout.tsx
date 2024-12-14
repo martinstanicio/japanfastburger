@@ -21,7 +21,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={cn("dark antialiased", bodyFont.className)}>
+      <body
+        className={cn(
+          "dark grid min-h-screen grid-rows-[auto_1fr_auto] antialiased",
+          bodyFont.className,
+        )}
+      >
         <Navbar />
         {children}
         <Footer />
