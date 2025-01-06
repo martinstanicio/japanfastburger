@@ -63,6 +63,11 @@
   * {
     @apply border-border;
   }
+
+  html {
+    @apply scroll-m-28 scroll-smooth;
+  }
+
   body {
     @apply bg-background text-foreground;
   }
