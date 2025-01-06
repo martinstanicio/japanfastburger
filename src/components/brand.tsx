@@ -13,7 +13,7 @@ export default function Brand({
       {...props}
     >
       <div className="size-8 rounded-full bg-red-500" />
-      <span className="text-xl font-bold">
+      <span className="font-script text-4xl">
         <span className="max-sm:hidden">Japan Fast Burger</span>
         <span className="sm:hidden">JFB</span>
       </span>
